@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchAsyncMovieorShowDetail,getSelectedMovieorShow } from '../../features/movies/movieSlice';
+import { fetchAsyncMovieorShowDetail,getSelectedMovieorShow ,removeSelectedMovieorShow} from '../../features/movies/movieSlice';
 import './MovieDetail.scss';
 
 function MovieDetail() {
@@ -13,9 +13,16 @@ function MovieDetail() {
 
   useEffect(()=>{
     dispatch(fetchAsyncMovieorShowDetail(imdbID));
+    return()=>{
+      dispatch(removeSelectedMovieorShow())
+    }
   },[dispatch,imdbID]);
+
   return (
     <div className='movie-section'>
+      {Object.keys(data).length===0 ?
+      (<div> ...Loading</div>):(
+<>
       <div className='section-left'>
         <div className='movie-title'>
           {data.Title}
@@ -56,8 +63,10 @@ function MovieDetail() {
       <div className='section-right'>
           <img src={data.Poster} alt={data.Title}/>
         </div>
+      </> )
+    }
     </div>
-  )
-}
+      )
+  }
 
 export default MovieDetail

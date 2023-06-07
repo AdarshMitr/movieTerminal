@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/movieTerminal/static/css/main.83d376ae.css",
-    "main.js": "/movieTerminal/static/js/main.c7df9cc7.js",
+    "main.js": "/movieTerminal/static/js/main.6a6d4028.js",
     "static/media/pnf.jpg": "/movieTerminal/static/media/pnf.38a2ceebb514ace0d870.jpg",
     "static/media/user.png": "/movieTerminal/static/media/user.109eb92014ac0b55efdf.png",
     "index.html": "/movieTerminal/index.html",
     "main.83d376ae.css.map": "/movieTerminal/static/css/main.83d376ae.css.map",
-    "main.c7df9cc7.js.map": "/movieTerminal/static/js/main.c7df9cc7.js.map"
+    "main.6a6d4028.js.map": "/movieTerminal/static/js/main.6a6d4028.js.map"
   },
   "entrypoints": [
     "static/css/main.83d376ae.css",
-    "static/js/main.c7df9cc7.js"
+    "static/js/main.6a6d4028.js"
   ]
 }

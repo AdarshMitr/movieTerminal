@@ -7,6 +7,7 @@ import PageNotFound from "./components/PageNotFound/PageNotFound";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 
+export const basePath="/movieTerminal";
 function App() {
   return (
     <div className="app">
@@ -14,8 +15,8 @@ function App() {
         <Header />
         <div className="container">
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/movie/:imdbID" element={<MovieDetail />} />
+            <Route path={`${basePath}/`} element={<Home />} />
+            <Route path={`${basePath}/movie/:imdbID`} element={<MovieDetail />} />
 
             <Route path="*" element={<PageNotFound />} />
           </Routes>

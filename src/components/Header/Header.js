@@ -17,7 +17,7 @@ export default function Header() {
   return (
     <div className='header'>
       
-      <div className='logo'><Link to='/'>Movie Terminal </Link></div>
+      <div className='logo'><Link to='/movieTerminal'>Movie Terminal </Link></div>
      
 <div className='search-bar'>
   <form onSubmit={submitHandler}>
